@@ -1,21 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes earthquakeShake {
+  0%, 100% { 
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  5%, 15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 95% {
+    transform: translate3d(-4px, 6px, 0) rotate(-0.5deg);
+  }
+  10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90% {
+    transform: translate3d(8px, -4px, 0) rotate(1deg);
+  }
+  12%, 22%, 32%, 42%, 52%, 62%, 72%, 82%, 92% {
+    transform: translate3d(-7px, -3px, 0) rotate(-1deg);
+  }
+  17%, 27%, 37%, 47%, 57%, 67%, 77%, 87%, 97% {
+    transform: translate3d(5px, 5px, 0) rotate(0.5deg);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.earthquake {
+  animation: earthquakeShake 2s cubic-bezier(.36,.07,.19,.97) both;
+  animation-iteration-count: infinite;
+  perspective: 1000px;
+  backface-visibility: hidden;
+}
+
+.stop-earthquake {
+  animation: none;
+}
+
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
 }
