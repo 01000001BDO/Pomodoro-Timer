@@ -1,4 +1,4 @@
-# 🍅  Pomodoro  Timer !
+# ⏰  Pomodoro  Timer !
  
 A unique Pomodoro timer! Built with Next.js, TypeScript, and Tailwind CSS.
 
@@ -23,10 +23,10 @@ A unique Pomodoro timer! Built with Next.js, TypeScript, and Tailwind CSS.
 
 ```bash
 # Clone the repository
-git clone https://github.com/YourUsername/earthquake-pomodoro.git
+git clone https://github.com/01000001BDO/Pomodoro-Timer.git
 
 # Navigate to the project directory
-cd earthquake-pomodoro
+cd  Pomodoro-Timer
 
 # Install dependencies
 npm install
