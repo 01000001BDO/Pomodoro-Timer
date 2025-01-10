@@ -140,7 +140,7 @@ export default function PomodoroApp() {
       <main className={`min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 
                        dark:text-white transition-colors duration-300 px-4 py-8 
                        md:p-8 ${isShaking ? 'earthquake' : 'stop-earthquake'}`}>
-        <a 
+         <a 
           href="https://github.com/01000001BDO" 
           target="_blank" 
           rel="noopener noreferrer"
